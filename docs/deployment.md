@@ -2,6 +2,19 @@
 
 Development and local end-to-end integration are complete. The deployment developer owns the remaining work below.
 
+## Environment files
+
+For local testing, create ignored environment files from the committed templates:
+
+```powershell
+Copy-Item backend/.env.example backend/.env
+Copy-Item frontend/.env.example frontend/.env.local
+```
+
+Fill them with the new credentials. Never commit `.env` or `.env.local`.
+
+For production, do not upload these files. Enter backend variables in Render and frontend variables in Vercel.
+
 ## Before deployment
 
 1. Confirm both Supabase migrations and the private `consultation-audio` bucket.

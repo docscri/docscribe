@@ -1,0 +1,6 @@
+backend/.venv/
+backend/.env
+backend/.git-backend-backup/
+supabase/.temp/
+__pycache__/
+*.pyc
